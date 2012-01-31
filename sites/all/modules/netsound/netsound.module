@@ -41,8 +41,7 @@ function netsound_block($op = 'list', $delta = 0, $edit = array()) {
             $keyword = trim($keyword);
             $linked[] = l($keyword,'ting/search/'.$keyword);
           }
-          drupal_add_css(drupal_get_path('module', 'netsound') .'/styles.css');
-          $block['content'] = '<div class="keywords-slider"><div class="canvas">'.implode(" ",$linked).'</div></div>';
+          $block['content'] = '<ul><li> '. implode("</li><li>",$linked) .'</li></ul>';
         }
         break;
       case 1:
